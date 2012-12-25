@@ -1,12 +1,12 @@
-# tinyAjaxForm.js - a tiny alternative to ajaxForm
+# tinyAjaxForm.js
 
 ## Overview
 
 tinyAjaxForm is a small and simple library that transforms regular forms into ajax forms.
 
-It requires jQuery to run.
+Dependencies: jQuery
 
-Compared to ajaxForm:
+## Compared to ajaxForm
 
 **Cons:** No support for file uploads. Doesn't have several ajaxForm features
 
@@ -32,20 +32,23 @@ If Javascript is disabled it will disgrade gracefully, and act like a normal for
 
 ## Usage
 
-Usage: $(form-selector).tinyAjaxForm(options)
-  OR:  $(form-selector).tinyAjaxForm(success\_callback)
-  OR: $(form-selector).tinyAjaxForm(targetHtmlElement)
+Usage:
+    $(form-selector).tinyAjaxForm(options)
+
+    $(form-selector).tinyAjaxForm(successCallback)
+
+    $(form-selector).tinyAjaxForm(targetHtmlElementSelector)
 
 'options' is a dictionary object with these attributes:
 
-    success: a function to call if the ajax query is successful (same as jQuery)
-    error: a function to be call if it failed (same as jQuery)
-    dataType: What data to expect back (text, json, ... same as jQuery)
+* success: a function to call if the ajax query is successful (same as jQuery)
+* error: a function to be call if it failed (same as jQuery)
+* dataType: What data to expect back (text, json, ... same as jQuery)
 
-    beforeSubmit(params, form, options):
-        A function to call before submitting the form.
-        It may manipulate the params object before the form is submitted.
-        If it returns 'false', the submit is aborted.
+* beforeSubmit(params, form, options):
+    A function to call before submitting the form.
+    It may manipulate the params object before the form is submitted.
+    If it returns 'false', the submit is aborted.
 
 
 
@@ -53,7 +56,7 @@ Usage: $(form-selector).tinyAjaxForm(options)
 
 If you want to replace ajaxForm in an existing page, you can place this line right after loading tinyAjaxForm:
 
-        jQuery.fn.ajaxForm=jQuery.fn.tinyAjaxForm;
+    jQuery.fn.ajaxForm=jQuery.fn.tinyAjaxForm;
 
 ## License
 
