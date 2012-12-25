@@ -33,6 +33,7 @@ If Javascript is disabled it will disgrade gracefully, and act like a normal for
 ## Usage
 
 Usage:
+
     $(form-selector).tinyAjaxForm(options)
 
     $(form-selector).tinyAjaxForm(successCallback)
@@ -46,6 +47,7 @@ Usage:
 * dataType: What data to expect back (text, json, ... same as jQuery)
 
 * beforeSubmit(params, form, options):
+
     A function to call before submitting the form.
     It may manipulate the params object before the form is submitted.
     If it returns 'false', the submit is aborted.
