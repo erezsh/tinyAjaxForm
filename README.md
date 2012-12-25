@@ -55,3 +55,6 @@ If you want to replace ajaxForm in an existing page, you can place this line rig
 
         jQuery.fn.ajaxForm=jQuery.fn.tinyAjaxForm;
 
+## License
+
+[MIT](http://malsup.github.com/mit-license.txt)
