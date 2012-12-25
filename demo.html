@@ -1,0 +1,24 @@
+<html>
+<body>
+    <form id="form1" action="tinyAjaxForm.js">
+        <input type="submit" value="Show code">
+    </form>
+    <div></div>
+
+    <form id="form2">
+        <input type="submit" value="Length of code">
+    </form>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="tinyAjaxForm.min.js"></script>
+    <script>
+    $.fn.ajaxForm=$.fn.tinyAjaxForm;
+    $('#form1').ajaxForm($('div'));
+    $('#form2').ajaxForm({
+        beforeSubmit: function(x, form) {
+            form.action = 'tinyAjaxForm.min.js';
+        },
+        success: function(r){ alert(r.length) }
+    });
+
+    </script>
