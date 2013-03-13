@@ -14,8 +14,8 @@ $.fn.tinyAjaxForm = function(opts) {
         opts = { success: opts };
     }
     opts = $.extend({
-        success: function(){},
-        error: function(){},
+        success: $.noop,
+        error: $.noop,
         dataType: 'text'
     }, opts);
 
